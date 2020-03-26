@@ -19,28 +19,30 @@ $connection = new mysqli(localhost, anjal, root, aayur);
 </head>
 <body>
 <?php 
-$data = $connection->query("SELECT * FROM PRODUCTS;");
-while($row = $data->fetch_assoc()){
-$product = $row['Products'];
-$price   = $row['Price'];
+$data         = $connection->query("SELECT * FROM PRODUCTS;");
+while($row    = $data->fetch_assoc()){
+$product      = $row['products'];
+$price        = $row['price'];
+$description  = $row['description'];
+$image        = $row['image'];
 
 ?>
 <div class="container">
-<div class="row">
-    <div class="col s12 m7 l4 offset-m1">
-      <div class="card">
+
+    <div class="col s12 m7 l4 ">
+      <div class="card z-depth-3">
         <div style="font-color: black" class="card-image">
-          <img src="images/sample-1.jpg">
-          <span class="card-title"><?php echo "$product"; ?></span>
+          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
+            <span class="card-title "><?php echo "$product";?></span>
+            <a class="btn-floating halfway-fab center waves-light red"><b><?php echo "$price"; ?></b></a>
         </div>
-        <div class="card-content">
-          <p><?php echo "$price"; ?></p>
+          <div class="card-content">
+            <p><?php  echo "$description"; ?> </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-
+    </div>
 
 <?php
 }
