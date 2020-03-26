@@ -18,6 +18,9 @@ $connection = new mysqli(localhost, anjal, root, aayur);
     <title>Aayur all in one Shoppy</title>
 </head>
 <body>
+<div class="container">
+<div class="row ">
+<div class="col s7">
 <?php 
 $data         = $connection->query("SELECT * FROM PRODUCTS;");
 while($row    = $data->fetch_assoc()){
@@ -27,9 +30,9 @@ $description  = $row['description'];
 $image        = $row['image'];
 
 ?>
-<div class="container">
 
-    <div class="col s12 m7 l4 ">
+  <div class="row ">
+    <div class="col s6 m3 l4 ">
       <div class="card z-depth-3">
         <div style="font-color: black" class="card-image">
           <?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?>
@@ -42,12 +45,15 @@ $image        = $row['image'];
         </div>
       </div>
     </div>
-    </div>
+  </div>
 
 <?php
 }
 
 ?>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    </div>
+    </div>
+    </div>
 </body>
 </html>
