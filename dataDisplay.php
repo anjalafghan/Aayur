@@ -32,14 +32,15 @@ $image        = $row['image'];
 
 <div class="container">
 <div class="row">
-    <div class="">
+    <div class="col">
 <div class="card ">
     <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator"<?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>';?> 
+      <img class="activator"<?php echo '<img src="data:image/jpeg;base64,'.base64_encode( $image ).'"/>'; ?> 
     </div>
+    <a class="btn-floating  halfway-fab center waves-light red"><b><?php echo " Rs. $price"; ?></b></a>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4"><?php echo "$product";?></span>
-      <a class="btn-floating halfway-fab center waves-light red"><b><?php echo "$price"; ?></b></a><p class="truncate"><?php  echo "$description"; ?> </p>
+      <p class="truncate"><?php  echo "$description"; ?> </p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4 activator"><?php echo "$product";?></span>
@@ -62,17 +63,17 @@ $image        = $row['image'];
   </script>
 <style>
 .grid-container{
-  display: grid;
-  grid-auto-flow: column;
+  /* display: grid;
+  grid-auto-flow: column; */
 }
 
 img{
-  width: 500px;
-     height: 500px;
-     background-position: 50% 50%;
-     background-repeat: no-repeat;
-     background-size: cover;
-}
+  /* width: 500px;
+  height: 500px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 </style>
 
 </div>
