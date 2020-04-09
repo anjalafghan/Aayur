@@ -11,6 +11,10 @@ $lang = array(
     "contact" => "Contact",
     "purchase" => "Purchase",       
     "lang_en" => "English",
-    "lang_mr" => "Marathi"
+    "lang_mr" => "Marathi",
+    "team1" => "Dattatray Agawane",
+    "team2" => "Tatyaso Agawane",
+    "team3" => "Snehal Bansode",
+    "director" => "director"
 );
 ?>

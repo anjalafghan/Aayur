@@ -1,5 +1,11 @@
 <?php
 session_start();
+$servername     =   "localhost";
+$user           =   "anjal";
+$password       =   "anjal";
+$databaseName   =   "aayur";
+$connect = mysqli_connect($servername,$user,$password,$databaseName);
+
 if (!isset($_SESSION['lang'])) 
     $_SESSION['lang'] = "en";
 

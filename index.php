@@ -60,7 +60,7 @@ include('config.php');
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
   </style>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg  navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo $lang['name'];?></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -131,14 +131,12 @@ include('config.php');
     </div>
   </section>
 
- 
-
-  <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
+   <!-- Portfolio Grid -->
+   <!-- <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase"><?php echo $lang['products'];?></h2>
+          <h2 class="section-heading text-uppercase"><?php // echo $lang['products'];?></h2>
           <h3 class="section-subheading text-muted">
             Lorem ipsum dolor sit amet consectetur.
           </h3>
@@ -236,6 +234,65 @@ include('config.php');
           </h2>
         </a>
     </div>
+  </section> -->
+<!--  <div class="col-md4">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-shopping-cart fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/1.jpg" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <h4><?php //echo $row['product_category']; ?></h4>
+            <p class="text-muted"><?php //echo $row['product_name_en']; ?></p>
+          </div>
+        </div>  -->
+  <!-- Portfolio Grid -->
+  <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><?php echo $lang['products'];?></h2>
+          <h3 class="section-subheading text-muted">
+          <!-- TODO: browse Shopping here etc -->
+          </h3>
+        </div>
+      </div>
+     <div class="container">
+     <div class="row">
+      <?php 
+$data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
+$rowNo = $data->num_rows;
+while($row = $data->fetch_assoc()){
+ 
+?> 
+<div class="col-xs-12">
+        <div class="col-md-6 col-sm-12 portfolio-item">
+              <div class="portfolio-hover-content col-xs-12 md-6 lg-3">
+            </div>
+          </a>
+          <div class="portfolio-caption">
+            <h4><?php echo $row['product_category']; ?></h4>
+          </div>
+</div>
+
+  <?php
+} 
+
+?>
+</div>
+      </div>
+     </div>
+       
+      <div class="col-lg-12 text-center">
+        <a href="newwebsite">
+          <h2 class="section-subheading" style="padding-top: 1em;">Click here to see all our products
+          </h2>
+        </a>
+    </div>
   </section>
 
  <!-- Services -->
@@ -304,9 +361,9 @@ include('config.php');
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team1'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -328,9 +385,9 @@ include('config.php');
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team2'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -352,9 +409,9 @@ include('config.php');
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team3'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -429,7 +486,7 @@ include('config.php');
               <div class="col-md-6">
                 <div class="form-group">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
-                   width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                   width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
               </div>
               <div class="clearfix"></div>
