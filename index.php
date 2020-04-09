@@ -304,9 +304,9 @@ include('config.php');
       <div class="row">
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team1'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -328,9 +328,9 @@ include('config.php');
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team2'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -352,9 +352,9 @@ include('config.php');
         </div>
         <div class="col-sm-4">
           <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/.jpg" alt="" />
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
+            <img class="mx-auto rounded-circle" src="" alt="" />
+            <h4><?php echo $lang['team3'];?></h4>
+            <p class="text-muted"><?php echo $lang['director'];?></p>
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
                 <a href="#">
@@ -429,7 +429,7 @@ include('config.php');
               <div class="col-md-6">
                 <div class="form-group">
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
-                   width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                   width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
               </div>
               <div class="clearfix"></div>
