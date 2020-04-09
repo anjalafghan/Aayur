@@ -60,7 +60,7 @@ include('config.php');
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
   </style>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg  navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo $lang['name'];?></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -131,14 +131,12 @@ include('config.php');
     </div>
   </section>
 
- 
-
-  <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
+   <!-- Portfolio Grid -->
+   <!-- <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase"><?php echo $lang['products'];?></h2>
+          <h2 class="section-heading text-uppercase"><?php // echo $lang['products'];?></h2>
           <h3 class="section-subheading text-muted">
             Lorem ipsum dolor sit amet consectetur.
           </h3>
@@ -230,6 +228,65 @@ include('config.php');
           </div>
         </div>
       </div>
+      <div class="col-lg-12 text-center">
+        <a href="newwebsite">
+          <h2 class="section-subheading" style="padding-top: 1em;">Click here to see all our products
+          </h2>
+        </a>
+    </div>
+  </section> -->
+<!--  <div class="col-md4">
+        <div class="col-md-4 col-sm-6 portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-shopping-cart fa-3x"></i>
+              </div>
+            </div>
+            <img class="img-fluid" src="img/portfolio/1.jpg" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <h4><?php //echo $row['product_category']; ?></h4>
+            <p class="text-muted"><?php //echo $row['product_name_en']; ?></p>
+          </div>
+        </div>  -->
+  <!-- Portfolio Grid -->
+  <section class="bg-light page-section" id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase"><?php echo $lang['products'];?></h2>
+          <h3 class="section-subheading text-muted">
+          <!-- TODO: browse Shopping here etc -->
+          </h3>
+        </div>
+      </div>
+     <div class="container">
+     <div class="row">
+      <?php 
+$data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
+$rowNo = $data->num_rows;
+while($row = $data->fetch_assoc()){
+ 
+?> 
+<div class="col-xs-12">
+        <div class="col-md-6 col-sm-12 portfolio-item">
+              <div class="portfolio-hover-content col-xs-12 md-6 lg-3">
+            </div>
+          </a>
+          <div class="portfolio-caption">
+            <h4><?php echo $row['product_category']; ?></h4>
+          </div>
+</div>
+
+  <?php
+} 
+
+?>
+</div>
+      </div>
+     </div>
+       
       <div class="col-lg-12 text-center">
         <a href="newwebsite">
           <h2 class="section-subheading" style="padding-top: 1em;">Click here to see all our products
