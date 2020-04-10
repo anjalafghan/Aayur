@@ -1,23 +1,6 @@
 <?php
-$servername     =   "localhost";
-$user           =   "anjal";
-$password       =   "anjal";
-$databaseName   =   "aayur";
-$connect = mysqli_connect($servername,$user,$password,$databaseName);
+include_once('config.php');
 $connect -> set_charset("utf8");
-
-if (!isset($_SESSION['lang'])) 
-    $_SESSION['lang'] = "en";
-
-    else if(isset($_GET['lang']) && $_SESSION['lang'] != $_GET['lang'] && !empty($_GET['lang'])){
-        if ($_GET['lang'] == "en") {
-            $_SESSION['lang'] = "en"; 
-        }
-        else{
-            $_SESSION['lang'] = "mr";
-        }
-    }
-
 
 ?>
 
@@ -38,10 +21,11 @@ if (!isset($_SESSION['lang']))
             $data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
                 while($row = $data->fetch_assoc()){
         ?>
-        <div class="col">
+        <div class="col-sm-3 col-lg-3 col-md-4">
             <div class="col portfolio-item">
                 <div class="portfolio-hover-content ">
                 </div>
+                <img class="img-fluid" src="img/portfolio/5.jpg" alt="" />
             <div class="portfolio-caption">
                 <h4><?php
                 if ($_SESSION['lang'] == "mr") {
