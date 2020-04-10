@@ -1,4 +1,4 @@
-Aayur all in one shoppy
+Aayur all in one shoppy.
 
 ## Copyright and License
 
