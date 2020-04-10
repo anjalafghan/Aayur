@@ -68,11 +68,11 @@ include('config.php');
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover a:active{background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover  .dropdown-content .dropdown:active {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover  .dropbtn .dropdown:active{background-color: #3e8e41;}
   </style>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg  navbar-dark fixed-top" id="mainNav">
