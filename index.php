@@ -1,14 +1,16 @@
 <?php
+header('Content-type: text/html; charset=UTF-8');
+
 include('config.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 
   <title><?php echo $lang['title'];?></title>
 
@@ -32,6 +34,19 @@ include('config.php');
 
 <body id="page-top">
   <style>
+ .map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -251,49 +266,49 @@ include('config.php');
           </div>
         </div>  -->
   <!-- Portfolio Grid -->
-  <section class="bg-light page-section" id="portfolio">
+ <?php include('display.php');?>
+ <!-- <section class="bg-light page-section" id="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase"><?php echo $lang['products'];?></h2>
+          <h2 class="section-heading text-uppercase"><?php// echo $lang['products'];?></h2>
           <h3 class="section-subheading text-muted">
-          <!-- TODO: browse Shopping here etc -->
+          <!-- TODO: browse Shopping here etc 
           </h3>
         </div>
       </div>
      <div class="container">
      <div class="row">
-      <?php 
-$data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
-$rowNo = $data->num_rows;
-while($row = $data->fetch_assoc()){
- 
-?> 
+      <?php //
+//$data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
+//$rowNo = $data->num_rows;
+//while($row = $data->fetch_assoc()){
+//?> 
 <div class="col-xs-12">
         <div class="col-md-6 col-sm-12 portfolio-item">
               <div class="portfolio-hover-content col-xs-12 md-6 lg-3">
             </div>
           </a>
           <div class="portfolio-caption">
-            <h4><?php echo $row['product_category']; ?></h4>
+            <h4><?php// echo $row['product_category']; ?></h4>
           </div>
 </div>
 
   <?php
-} 
+//} 
 
 ?>
 </div>
       </div>
-     </div>
+     </div> -->
        
-      <div class="col-lg-12 text-center">
+      <!-- <div class="col-lg-3 col-md-6 col-xs-12 text-center">
         <a href="newwebsite">
           <h2 class="section-subheading" style="padding-top: 1em;">Click here to see all our products
           </h2>
         </a>
     </div>
-  </section>
+  </section> -->
 
  <!-- Services -->
  <section class="page-section" id="services">
@@ -483,12 +498,14 @@ while($row = $data->fetch_assoc()){
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="form-group">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
-                   width="500" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-              </div>
+
+                <div class="container-fluid">
+                  <div class="map-responsive">
+                  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
+                   width="300" height="350" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
+                   </div>
+                  </div>
+             
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
