@@ -126,6 +126,7 @@ include('config.php');
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
+      
       </div>
     </div>
   </header>
@@ -139,6 +140,22 @@ include('config.php');
           <h3 class="section-subheading text-muted">
             Lorem ipsum dolor sit amet consectetur.
           </h3>
+          <div class="row">
+            <div class="col">
+              <style>
+              li{list-style-type:none}</style>
+              <ul><li ><?php echo $lang['bullet1']; ?></li>
+              <li><?php echo $lang['bullet2']; ?></li>
+              <li><?php echo $lang['bullet3']; ?></li>
+              <li><?php echo $lang['bullet4']; ?></li>
+              <li><?php echo $lang['bullet5']; ?></li>
+              <li><?php echo $lang['bullet6']; ?></li>
+              <li><?php echo $lang['bullet7']; ?></li>
+              <li><?php echo $lang['bullet8']; ?></li>
+              <li><?php echo $lang['bullet9']; ?></li></ul>
+              <p><?php echo $lang['aboutData']; ?></p>
+            </div>
+          </div>
         </div>
       </div>
 
