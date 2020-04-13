@@ -327,19 +327,27 @@ include('config.php');
 
   <!-- Contact -->
   <section class="page-section" id="contact">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase"><?php echo $lang['contact'];?></h2>
           <h3 class="section-subheading text-muted">
-            Feel free to leave your details
+            <?php echo $lang['contactsubheading'];?>
           </h3>
         </div>
       </div>
+      <div class="container-fluid form-group">
+                  <div class="map-responsive">
+                  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
+                   width="300" height="350" frameborder="0" style="border:0;"  aria-hidden="false" tabindex="0"></iframe>
+                   </div>
+                  </div>
+
       <div class="row">
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="row">
+              
               <div class="col-md-6">
                 <div class="form-group">
                   <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required"
@@ -356,21 +364,17 @@ include('config.php');
                     data-validation-required-message="Please enter your phone number." />
                   <p class="help-block text-danger"></p>
                 </div>
-                <div class="form-group">
-                  <input class="form-control" id="message" type="textarea" placeholder="Your Message *" required="required"
-                    data-validation-required-message="Please enter your Message" />
+              </div>
+              <div class="col">
+              <div class="form-group">
+                  <textarea class="form-control"  id="message" type="textarea" placeholder="Your Message *" required="required"
+                    data-validation-required-message="Please enter your Message" ></textarea>
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
 
-                <div class="container-fluid">
-                  <div class="map-responsive">
-                  <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.56511804475!2d73.00410551399298!3d19.082848856718197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13428f153c3%3A0xcedc32f30e4d80ed!2sSatra%20Plaza!5e0!3m2!1sen!2sin!4v1586341884461!5m2!1sen!2sin"
-                   width="300" height="350" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0"></iframe>
-                   </div>
-                  </div>
-             
-              <div class="clearfix"></div>
+
+              <div class="clearfix">a</div>
               <div class="col-lg-12 text-center">
                 <div id="success"></div>
                 <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">
