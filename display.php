@@ -18,15 +18,20 @@ $connect -> set_charset("utf8");
 <div class="container">
     <div class="row">
         <?php
-            $data = $connect->query("SELECT product_category,product_category_mr,product_name_en FROM products");
+            $data = $connect->query("SELECT product_category,product_category_mr,product_image,product_name_en FROM products");
                 while($row = $data->fetch_assoc()){
         ?>
         <div class="col-sm-3 col-lg-3 col-md-4">
             <div class="col portfolio-item">
-                <div class="portfolio-hover-content ">
+                <div class="portfolio-hover-content">
                 </div>
-                <img class="img-fluid" src="img/portfolio/5.jpg" alt="" />
-            <div class="portfolio-caption">
+                <?php 
+                if ($row['product_image']==NULL) {
+                    echo '<img class="img-fluid" src="img/compressed/2.jpg"/>'; 
+                }
+                else
+                    echo '<img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode( $row['product_image'] ).'"/>'; ?>
+            <div class="portfolio-caption ">
                 <h4><?php
                 if ($_SESSION['lang'] == "mr") {
                     echo $row['product_category_mr'];
@@ -45,4 +50,3 @@ $connect -> set_charset("utf8");
 
     </div>
 </div>
-

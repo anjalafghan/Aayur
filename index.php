@@ -33,6 +33,9 @@ include('config.php');
 </head>
 
 <body id="page-top">
+
+
+<script></script>
   <style>
  .map-responsive{
     overflow:hidden;
@@ -68,14 +71,17 @@ include('config.php');
   display: block;
 }
 
-.dropdown-content a:hover a:active{background-color: #ddd;}
+.dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover  .dropdown-content .dropdown:active {display: block;}
+.dropdown:hover  .dropdown-content . {display: block;}
 
-.dropdown:hover  .dropbtn .dropdown:active{background-color: #3e8e41;}
+.dropdown:hover  .dropbtn .{background-color: #3e8e41;}
+
+
+}
   </style>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg  navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar  navbar-expand-lg  navbar-dark fixed-top"  id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><?php echo $lang['name'];?></a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -84,7 +90,7 @@ include('config.php');
         Menu
         <i class="fas fa-bars"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse"  id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about"><?php echo $lang['about'];?></a>
@@ -108,10 +114,10 @@ include('config.php');
 
             <a class="nav-link js-scroll-trigger" href="#purchase"><?php echo $lang['purchase'];?></a>
           </li>
-   <li class="nav-item">
+   <li class="nav-item" >
      <div class="dropdown">
-     <a class="nav-link js-scroll-trigger" href=""> <i class="fab fa fa-globe"></i></a>
-  <div class="dropdown-content">
+     <a class="nav-link " onclick=""> <i class="fab fa fa-globe" onclick=""></i></a>
+  <div class="dropdown-content "onclick="">
     <a href="index.php?lang=en">English</a>
     <a href="index.php?lang=mr">Marathi</a>
   </div>
