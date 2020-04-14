@@ -1,9 +1,9 @@
 <?php
 session_start();
 $servername     =   "localhost";
-$user           =   "anjal";
-$password       =   "anjal";
-$databaseName   =   "aayur";
+$user           =   "aayurshoppy";
+$password       =   "}YV}cC!grF6L";
+$databaseName   =   "aayurshoppy";
 $connect = mysqli_connect($servername,$user,$password,$databaseName);
 
 if (!isset($_SESSION['lang'])) 
