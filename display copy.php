@@ -18,12 +18,11 @@ $connect -> set_charset("utf8");
 <div class="container">
     <div class="row">
         <?php
-            $data = $connect->query("SELECT product_category,product_category_mr,product_image,product_name_en FROM products ");
+            $data = $connect->query("SELECT product_category,product_category_mr,product_image,product_name_en FROM products");
                 while($row = $data->fetch_assoc()){
         ?>
         <div class="col-sm-3 col-lg-3 col-md-4">
-            <div class="col portfolio-item btn bg-transparent"  data-toggle="collapse" href="#<?php if($_SESSION['lang']=="en")echo str_replace(' ','',$row['product_category']);else echo str_replace(' ','',$row['product_category_mr']);
-            ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <div class="col portfolio-item">
                 <div class="portfolio-hover-content">
                 </div>
                 <?php 
@@ -41,11 +40,6 @@ $connect -> set_charset("utf8");
                     echo $row['product_category'];
                 }
                 ?></h4>
-                <div class="collapse" id="<?php            if($_SESSION['lang']=="en") echo str_replace(' ','',$row['product_category']); else echo str_replace(' ','',$row['product_category_mr']);?>">
-  <div class="card card-body">
-
-  </div>
-</div>
             </div>
             </div>
         </div>
@@ -57,3 +51,13 @@ $connect -> set_charset("utf8");
     </div>
 </div>
 
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
