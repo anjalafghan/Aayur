@@ -28,6 +28,7 @@ $lang = array(
     "bullet7"=>" Organic Products.",
     "bullet8"=>"Healthy and hygienic.",
     "bullet9"=>"Franchise Available",
-    "contactsubheading"=>"Feel Free to Contact Us"
+    "contactsubheading"=>"Feel Free to Contact Us",
+    "aboutsubheading"=>"All information about our Company"
 );
 ?>
