@@ -32,28 +32,15 @@ $connect -> set_charset("utf8");
                 }
                 else
                     echo '<img class="img-fluid" src="data:image/jpeg;base64,'.base64_encode( $row['product_image'] ).'"/>'; ?>
-            <div class="portfolio-caption ">
-                <h4><?php
-                if ($_SESSION['lang'] == "mr") {
-                    echo $row['product_category_mr'];
-                }
-                else{
-                    echo $row['product_category'];
-                }
-                ?></h4>
-                <div class="collapse" id="<?php            if($_SESSION['lang']=="en") echo str_replace(' ','',$row['product_category']); else echo str_replace(' ','',$row['product_category_mr']);?>">
-  <div class="card card-body">
+                    <div class="portfolio-caption ">
+                        <h4><?php if ($_SESSION['lang'] == "mr") echo $row['product_category_mr'];else echo $row['product_category'];?></h4>
+                            <div class="collapse" id="<?php            if($_SESSION['lang']=="en") echo str_replace(' ','',$row['product_category']); else echo str_replace(' ','',$row['product_category_mr']);?>">
+                                <div class="card card-body">
 
-  </div>
-</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-  <?php
-}
-
-?>
-
+<?php } ?></div>
     </div>
-</div>
-

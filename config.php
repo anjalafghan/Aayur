@@ -3,7 +3,7 @@ session_start();
 $servername     =   "localhost";
 $user           =   "aayurshoppy";
 $password       =   "}YV}cC!grF6L";
-$databaseName   =   "aayurshoppy";
+$databaseName   =   "aayur";
 $connect = mysqli_connect($servername,$user,$password,$databaseName);
 
 if (!isset($_SESSION['lang'])) 
