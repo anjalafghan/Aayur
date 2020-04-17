@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername     =   "localhost";
-$user           =   "anjal";
-$password       =   "anjal";
+$user           =   "aayurshoppy";
+$password       =   "}YV}cC!grF6L";
 $databaseName   =   "aayur";
 $connect = mysqli_connect($servername,$user,$password,$databaseName);
 

@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => 'localhost',
+    'database_port' => '',
+    'database_name' => 'aayur',
+    'database_user' => 'aayurshoppy',
+    'database_password' => '}YV}cC!grF6L',
+    'database_prefix' => 'ps_',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'xv3NXxW3YpzpUtBsBJ102zWFNFUuuht440oLRL6iJFDS9Fa4pD7azu0I',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2020-04-16',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'CbBFoQr7pDvWP0fZOm92ujoX1V2UNs0ZsMJnLeMfN13AghgntCNBJMST',
+    'cookie_iv' => 'tvnELE9I',
+    'new_cookie_key' => 'def00000deac52b2344e1f5f34f11371e222843bd6e3f3abaf6adebd30187e46c34f82b152b727ef668f4f1c4bb4057524930320dd98342086813594b3fcce20853a4fe8',
+  ),
+);
