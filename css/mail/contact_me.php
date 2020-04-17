@@ -7,6 +7,6 @@
 
 
 //send email
-    mail("anjal.afghan93@gmail.com", "Contact Us: ".$name,  $message);
+    mail("email@gmail.com", "Contact Us: ".$name,  $message);
 
 ?>
